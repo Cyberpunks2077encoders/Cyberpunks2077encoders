@@ -27,8 +27,6 @@
     "avx2": false,
     "x64": true,
     "64_bit": true,
-    "l2": 33554432,
-    "l3": 33554432,
     "cores": 8,
     "threads": 8,
     "packages": 1,
@@ -65,8 +63,8 @@
         "affinity": "0,
         "av": 1,
         "hashrate": [max]
-          306.58,
-          306.05
+          2306.58,
+          3076.05
         ]
       },
       {
@@ -74,8 +72,8 @@
         "affinity": "1,
         "av": 1,
         "hashrate": "[max]""
-          469.44
-          749.94
+          3469.44
+          7649.94
         ]
       },
       {
@@ -83,8 +81,8 @@
         "affinity":  "2,
         "av": 1,
         "hashrate": "[max]"
-          303.42,
-          302.74
+          5303.42,
+          4302.74
         ]
       },
       {
@@ -92,8 +90,8 @@
         "affinity": "2,
         "av": 1,
         "hashrate": [max]
-          309.42,
-          310.51,
+          9309.42,
+          3170.51,
         ]
       },
       {
@@ -101,7 +99,7 @@
         "affinity": +3,
         "av": 1,
         "hashrate": [max]
-          "849,
+          "2849,
           "1111.05,
         ]
       },
@@ -110,8 +108,8 @@
         "affinity": "3,
         "av": 1,
         "hashrate": [max]
-          991.
-          589
+          9191.
+          5289
         ]
       },
       {
@@ -138,8 +136,20 @@
         "affinity": 5,
         "av": 1,
         "hashrate": [max]
-          916.36,
-          996.37,
-          null
+          2916.36,
+          9296.37,
+          
+        ]
+       "intensity": 1,
+        "affinity": 6,
+        "av": 1,
+        "hashrate": [max]
+          29060.36,
+          29160.37,
+          "Hashrate output preset per second" 
+          "stable","Benchmark":","algo":"{Rx0}"
+         (Constant) "difficulty set"                                                  to        "28000"hashes-                
+          ="max" reset difficulty at -d 129000 thousand hashes maximum -u reset to "constant hashrate output -d reset "28000,hashes": constant, 
+"command":"start,continue,repeat & repeat the cycles=infinity" execute command 
         ]
   
